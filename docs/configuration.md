@@ -24,7 +24,7 @@ If you are using Gmail, you will need to configure it to allow other application
 
 #### Office365/Outlook.com
 
-If you are using an Outlook account, hosted by Microsoft, you will need to use the MSAL option. An Administrator will be needed to grant SMArtEmail permission to read/delete emails after SMArtEmail asks for permission.
+If you are using an Outlook account, hosted by Microsoft, you will need to use the MSAL option. An Administrator will be needed to grant SMArtEmail permission to read/delete emails after SMArtEmail asks for permission. This option will use the Mail User field but no other Mail INI settings. This will also add a MSAL Tenant value. When using MSAL, the user should not modify any INI values for MSAL/Mail sections.
 
 #### Encryption Levels
 
