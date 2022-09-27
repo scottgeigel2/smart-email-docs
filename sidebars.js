@@ -6,5 +6,6 @@ module.exports = {
     'configuration',
     'operation',
     'exit-codes',
+    'msal-troubleshooting',
   ],
 };

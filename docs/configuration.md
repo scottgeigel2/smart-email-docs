@@ -10,7 +10,7 @@ In preparation to use the SMArt Email utility, you may need to do a bit of third
 
 ####  Email Protocols
 
-In order to leverage the SMArt Email utility, you will need to know which email protocol you use. The utility supports IMAP and POP email protocols.
+In order to leverage the SMArt Email utility, you will need to know which email protocol you use. The utility supports IMAP, POP, and MSAL email protocols.
 
 #### Email Provider Settings
 
@@ -22,9 +22,13 @@ If you are using Microsoft Exchange Server, you will need to make sure that it i
 
 If you are using Gmail, you will need to configure it to allow other applications (third-party apps) to connect to Gmail.
 
+#### Office365/Outlook.com
+
+If you are using an Outlook account, hosted by Microsoft, you will need to use the MSAL option. An Administrator will be needed to grant SMArtEmail permission to read/delete emails after SMArtEmail asks for permission.
+
 #### Encryption Levels
 
-You will also need to know which encryption level you use. The utility supports SSL 3.0, TLS 1.1, and TLS 1.2 encryption levels.
+You will also need to know which encryption level you use if using IMAP or POP. The utility supports SSL 3.0, TLS 1.1, and TLS 1.2 encryption levels.
 
 #### Ports
 
@@ -52,8 +56,8 @@ The SMArt Email (Smartemail.exe) supports the following arguments:
 | Argument | Required | Value |
 | -------- | -------- | ----- |
 | -credentials | Y | This parameter sets the user credentials and encrypts the username and passwords in the configuration file. The utility must run using this parameter only the first time in order to complete the configuration. This parameter sets the user credentials for the email server and OpCon user credentials as well. |
-| -user | Y | This parameter is used in conjunction with the --credentials. It defines the username for the email inbox that will be monitored by the SMArt Email utility. |
-| -password | Y | This parameter is used in conjunction with the --credentials. It defines the password for the email inbox that will be monitored by the SMArt Email utility. |
+| -user | N | This parameter is used in conjunction with the --credentials. It defines the username for the email inbox that will be monitored by the SMArt Email utility. **IMAP** and **POP** only. |
+| -password | N | This parameter is used in conjunction with the --credentials. It defines the password for the email inbox that will be monitored by the SMArt Email utility. **IMAP** and **POP** only. |
 | -opconuser | Y | This parameter is used in conjunction with the --credentials. It defines the OpCon username that will run the events triggered by SMArt Email utility. |
 | -opconpassword | Y | This parameter is used in conjunction with the --credentials. It defines the OpCon password for the user that will run the events triggered by SMArt Email utility. | 
 | -inifile | N | This is an optional parameter used to specify a different configuration file. The default configuration file is SMArtEmail.ini, which is installed in the C:\ProgramData\OpConxps\SMArt Email directory. <br></br><br></br> Note: The root OpConxps data folder is likely hidden. To access this directory, type C:\ProgramData in your File Explorer address bar. | 
@@ -86,7 +90,7 @@ The mail settings should be set up using the --credentials program switch since 
 | User | Blank | This parameter is used in conjunction with the --credentials program switch. It defines the username for the email inbox that will be monitored by the SMArt Email. |
 | Password | Blank | This parameter is used in conjunction with the --credentials. It defines the password for the email inbox that will be monitored by the SMArt Email. |
 | Server | Blank | This value should be the name of the email server to connect. <br></br><br></br> Note: If using TLS/SSL security, the value here should match the hostname of the certificate. Otherwise, you may receive a system error warning that the server certificate verification failed and that the connection aborted. |
-| EmailProtocol | Blank | This value can be IMAP or POP. | 
+| EmailProtocol | Blank | This value can be IMAP, POP, or MSAL. | 
 | SecurityProtocol | Blank | - This value can be SSL, SSL2, TLS1, TLS1_1, or TLS1_2. <br></br><br></br> - The value specified here will serve as a minimum to meet during security protocol negotiation. The utility will attempt to negotiate with the highest available protocol above the defined minimum and fail only if it does not connect. <br></br><br></br> - The negotiations will be as follows: <br></br><br></br> --- For SSL - Try TLS options first, then connect with SSL3 if that does not succeed. <br></br> --- For SSL2 - Try TLS options first, then connect with SSL3 or SSL2 if that does not succeed. <br></br> --- For TLS1 - Allow TLS1.0 or above <br></br> --- For TLS1_1 - Allow TLS1.1 or above <br></br> --- For TLS1_2 - Allow only TLS1.2 |
 | Port | Blank | This value should be the number of the port. Based on the EmailProtocol and SecurityProtocol, your port can change. | 
 | SelfSignedCertificate | True | This parameter, if set to "TRUE," allows a self-signed certificate to be accepted. <br></br><br></br> - Values: True or False |
