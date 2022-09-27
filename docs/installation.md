@@ -68,7 +68,7 @@ You can configure both the External Event authentication information and the Ema
 2. A web browser will take you to a Microsoft Login Page, select your SMArtEmail account
 3. Review the claims requested and click the checkbox to give administrator consent 
 
-#### Setup if the SMArtEmail email account also has administrator privileges for Outlook
+#### Setup if an Administrator needs to grant access for the SMArtEmail email account
 1. Click the checkbox that says "Do Not Associate or Store Account"
 2. A web browser will take you to a Microsoft Login Page, select your SMArtEmail account
 3. Review the claims requested and click the checkbox to give administrator consent 
