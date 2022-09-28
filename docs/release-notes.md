@@ -1,5 +1,9 @@
 # Release Notes
 
+## Version 20.0 New Features
+:eight_spoked_asterisk: SMArt Email now supports MSAL for Office365/Outlook.com
+* See the updated instructions in the installation, configuration, and troubleshooting sections.
+
 ## Version 17.0 New Features
 
 ### 2017 May

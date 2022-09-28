@@ -11,7 +11,7 @@ Before beginning the installation, ensure that the system requirements are met. 
 
 Complete the procedure in this section for installation of the SMArt Email utility.
 
-### To install the utility:
+### To install the utility for **POP** and **IMAP**:
 
 1. Log in to the Windows machine as a Local Administrator.
 2. Download the SMArt Email utility installation file from the [files.smatechnologies.com](https://files.smatechnologies.com/)  site.
@@ -44,6 +44,38 @@ You can configure both the External Event authentication information and the Ema
 22. Click **Install**.
 23. Wait while the installation completes. This may take a few minutes.
 24. Click **Finish** on the **InstallShield Wizard Completed** screen.
+
+
+### To install the utility for **MSAL**:
+
+1. Log in to the Windows machine as a Local Administrator.
+2. Download the SMArt Email utility installation file, version 20 or above, from the [files.smatechnologies.com](https://files.smatechnologies.com/)  site.
+3. Enter your valid username and password and click Login.
+4. Navigate to **Root Folder/SMArt Email**.
+5. Double-click the **SMA OpCon SMArt Email Install.exe**. The Select Language screen displays.
+6. Select the desired language for the installation screens and click **OK**. The Welcome screen displays.
+7. Click **Next**. The Destination Folder screen displays.
+8. Choose your Destination Folder and click **Next**. The **Configure SMA MSGIN Directory** screen displays.
+9. Choose the path to the SAM's MSGIN directory where external events are submitted or accept the default path.
+10. Click **Next**. The **Configure OpCon User** screen displays.
+11. *(Required)* Enter the OpCon user used to submit external events.
+12. *(Required)* Enter the password of the OpCon user used to submit external events.
+13. Click **Next**. The **Configure Email Server** displays.
+14. Select **MSAL**.
+
+#### Setup if the SMArtEmail email account also has administrator privileges for Outlook
+1. Click **Next**
+2. A web browser will take you to a Microsoft Login Page, select your SMArtEmail account
+3. Review the claims requested and click the checkbox to give administrator consent 
+
+#### Setup if an Administrator needs to grant access for the SMArtEmail email account
+1. Click the checkbox that says "Do Not Associate or Store Account"
+2. A web browser will take you to a Microsoft Login Page, select your SMArtEmail account
+3. Review the claims requested and click the checkbox to give administrator consent 
+4. Open a command prompt and navigate to SMArtEmail's installation directory
+5. Run: SMArtEmail.exe --renewMsalToken
+6. A web browser will take you to a Microsoft Login Page, select your SMArtEmail account
+
 
 ## Upgrade Installation
 To upgrade the SMArt Email utility, simply install the new package to the same directory as the previous installation. The installation package will preserve your configuration files automatically.
