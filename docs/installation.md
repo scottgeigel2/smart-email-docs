@@ -4,7 +4,7 @@
 
 Before beginning the installation, ensure that the system requirements are met. The supported software include:
 
-* Any supported version of Windows with .NET Framework 4.5 installed.
+* Any supported version of Windows with .NET Framework 4.8 installed.
 * A supported version of the MSLSAM installed on the machine.
 
 ## New Installation
