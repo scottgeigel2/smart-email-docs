@@ -35,7 +35,7 @@ Complete the procedure in this section for installation of the SMArt Email utili
 
 :::info Note 
 
-You can configure both the External Event authentication information and the Email Server connection information during install or after install by updating your configuration file. Refer to [Utility Configuration](/configuration) to learn more about modifying the configuration file.
+You can configure both the External Event authentication information and the Email Server connection information during install or after install by updating your configuration file. Refer to [Utility Configuration](./configuration) to learn more about modifying the configuration file.
 
 :::
 
