@@ -14,6 +14,13 @@ Complete the procedure in this section for installation of the SMArt Email utili
 ### To install the utility for **POP** and **IMAP**:
 
 1. Log in to the Windows machine as a Local Administrator.
+
+:::info Note
+
+The Local Administrator account used should be a domain user that is included as a Batch User in OpCon. This is the user that the MSAL token is created for and should be the account that runs any SMArt Email Job in OpCon.
+
+:::
+
 2. Download the SMArt Email utility installation file from the [files.smatechnologies.com](https://files.smatechnologies.com/)  site.
 3. Enter your valid username and password and click Login.
 4. Navigate to **Root Folder/SMArt Email**.
