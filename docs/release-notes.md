@@ -1,6 +1,17 @@
 # Release Notes
 
+## Version 20.1 Fixes
+
+### 2025 April
+
+:white_check_mark: Fixed an issue with MSAL mode using incorrect locale name for "Inbox".
+
+:white_check_mark: Fixed an issue with timezone overflow in MSAL mode on timezones east of GMT.
+
 ## Version 20.0 New Features
+
+### 2022 September
+
 :eight_spoked_asterisk: SMArt Email now supports MSAL for Office365/Outlook.com
 * See the updated instructions in the installation, configuration, and troubleshooting sections.
 
